@@ -1,6 +1,7 @@
 import { NavLink, Routes, Route } from "react-router";
 import Inicio from "./pages/Inicio.jsx";
 import Cadastro from "./pages/Cadastro.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 import "./index.css";
 export default function App() {
   return (
@@ -10,12 +11,14 @@ export default function App() {
         <nav aria-label="Menu principal">
           <NavLink to="/" end>Início</NavLink>
           <NavLink to="/cadastro">Cadastro</NavLink>
+          <NavLink to="/dashboard">Cursos</NavLink>
         </nav>
       </header>
       <main>
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/dashboard" element={<Dashboard />}/>
           <Route path="*" element={<p>Página não encontrada.</p>} />
         </Routes>
       </main>
